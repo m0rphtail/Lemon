@@ -6,7 +6,6 @@ import webbrowser
 import datetime
 import wikipedia
 
-
 # method to recognize the commands given to LEMON
 # using speech_Recognition module 
 def takeCommand():
@@ -15,7 +14,8 @@ def takeCommand():
 
 	with sr.Microphone() as source:
 		print('Listening')
-		
+		r.adjust_for_ambient_noise(source)
+
 		# seconds of non-speaking audio before a phrase is considered complete
 		r.pause_threshold = 0.7
 		audio = r.listen(source)
@@ -81,7 +81,7 @@ def tellTime():
 	speak("The time is sir" + hour + "Hours and" + min + "Minutes")	
 
 def Hello():
-	speak("Hello, how can I halp you?")
+	speak("Hello, how can I help you?")
 
 
 def Take_query():
@@ -123,6 +123,7 @@ def Take_query():
 			# results into summary of 4 lines (customizable) from wikipedia
 			result = wikipedia.summary(query, sentences = 4)
 			speak("According to wikipedia, ")
+			print(result)
 			speak(result)
 		
 		elif "what is your name" in query:
