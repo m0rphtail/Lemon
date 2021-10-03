@@ -1,1 +1,1 @@
-# hacktoberfest
+# Lemon, a Micro Assistant 
