@@ -14,7 +14,7 @@ def takeCommand():
 
 	with sr.Microphone() as source:
 		print('Listening')
-		r.adjust_for_ambient_noise(source)
+		r.adjust_for_ambient_noise(source, duration = 1)
 
 		# seconds of non-speaking audio before a phrase is considered complete
 		r.pause_threshold = 0.7
