@@ -1,6 +1,17 @@
 # Lemon, a Micro Assistant 
 
-Ask !
+### Description 
+As of now the code provides the following functionalities : 
+<br />
+
+* voice out an introduction
+* voice out time and date at the instant 
+* search for information on wikipedia
+* open links
+  
+
+### Ask away :
+Sample run of the program Lemon
 
 ```
 ➜  Lemon git:(main) ✗ python3 lemon.py
